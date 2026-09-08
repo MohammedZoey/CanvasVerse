@@ -1,61 +1,72 @@
-CanvasVerse
-Welcome to CanvasVerse! Choose your age group to get started.
-🌈 Ages 3–10 Simple coloring books 🎨 Ages 11–15 Coloring books + Free Draw ✨ Ages 16+ Advanced coloring + Free Draw
-Today's Challenge
-Draw something from outer space! 🚀
-🖼️ My Gallery
-← Back
-Choose Your Coloring Book
-👦 Boy Coloring Books 👧 Girl Coloring Books
-🏠 Home
-← Back
-Boy Coloring Books
-🦕 Dinosaurs 🚗 Cars & Vehicles 🚀 Space 🦁 Animals 🦸 Superheroes ⚽ Sports
-🏠 Home
-← Back
-Girl Coloring Books
-🦄 Unicorns 🧚 Fantasy 👑 Princesses 🧜 Mermaids 🌸 Flowers 🐰 Cute Animals
-🏠 Home
-← Back
-What do you want to create?
-📖 Coloring Books ✏️ Free Draw
-🏠 Home
-← Back
-Choose Boy or Girl
-👦 Boy Coloring Books 👧 Girl Coloring Books
-🏠 Home
-← Back
-Boy Coloring Books
-🐉 Dragons 🦖 Detailed Dinosaurs 🏎️ Sports Cars 🌌 Space 🎮 Gaming 🏀 Sports 🌊 Ocean Creatures
-🏠 Home
-← Back
-Girl Coloring Books
-🧚 Fantasy Worlds 🧜 Mermaids 🌙 Night Sky 🏰 Castles 🌺 Detailed Flowers 🐾 Cute Animals 👗 Fashion
-🏠 Home
-← Back
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>CanvasVerse</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-Small Medium Large
-✏️ Brush 🧽 Eraser ↩️ Undo ↪️ Redo 🧹 Clear 💾 Save as PNG 🏠 Home
-← Back
-Choose Your Studio
-📖 Advanced Coloring Books ✏️ Full Free Draw Studio
-🏠 Home
-← Back
-Advanced Coloring Books
-Category 1 Category 2 Category 3
-🏠 Home
-← Back
+  <div id="app">
 
-Small Medium Large
-✏️ Brush 🧽 Eraser ↩️ Undo ↪️ Redo 🧹 Clear 💾 Save as PNG 🏠 Home 🖼️ Gallery
-← Back
+    <!-- ========================================= -->
+    <!-- 1. HOME SCREEN                             -->
+    <!-- ========================================= -->
+    <section id="screen-home" class="screen active">
+      <h1 class="app-title">CanvasVerse</h1>
+      <p class="welcome-text">Welcome to CanvasVerse! Choose your age group to get started.</p>
 
-Big Small
-↩️ Undo 🧹 Clear 💾 Save as PNG 🏠 Home
-← Back
-My Gallery
+      <div class="age-buttons">
+        <button class="age-card" data-target="screen-age-3-10">
+          <span class="emoji">🌈</span>
+          <span class="age-label">Ages 3–10</span>
+          <span class="age-sub">Simple coloring books</span>
+        </button>
 
-+ New Drawing 🏠 Home
-Welcome back!
-Would you like to continue your last drawing?
-Continue Drawing Start New
+        <button class="age-card" data-target="screen-age-11-15">
+          <span class="emoji">🎨</span>
+          <span class="age-label">Ages 11–15</span>
+          <span class="age-sub">Coloring books + Free Draw</span>
+        </button>
+
+        <button class="age-card" data-target="screen-age-16-plus">
+          <span class="emoji">✨</span>
+          <span class="age-label">Ages 16+</span>
+          <span class="age-sub">Advanced coloring + Free Draw</span>
+        </button>
+      </div>
+
+      <!-- Daily Challenge banner (content filled in by script.js later) -->
+      <div id="daily-challenge" class="daily-challenge">
+        <p class="daily-challenge-title">Today's Challenge</p>
+        <p class="daily-challenge-text">Draw something from outer space! 🚀</p>
+      </div>
+
+      <button class="gallery-link" data-target="screen-gallery">🖼️ My Gallery</button>
+    </section>
+
+
+    <!-- ========================================= -->
+    <!-- 2. AGES 3–10 : Choose Boy/Girl              -->
+    <!-- ========================================= -->
+    <section id="screen-age-3-10" class="screen">
+      <nav class="screen-nav">
+        <button class="back-btn" data-target="screen-home">← Back</button>
+      </nav>
+      <h2>Choose Your Coloring Book</h2>
+
+      <div class="gender-buttons">
+        <button class="gender-card" data-target="screen-3-10-boy">
+          <span class="emoji">👦</span>
+          <span>Boy Coloring Books</span>
+        </button>
+        <button class="gender-card" data-target="screen-3-10-girl">
+          <span class="emoji">👧</span>
+          <span>Girl Coloring Books</span>
+        </button>
+      </div>
+      <!-- No Free Draw option for this age group -->
+
+      <button class="home-btn" data-target="screen-home">🏠 Home</button>
+    </section>
