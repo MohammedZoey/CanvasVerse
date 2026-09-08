@@ -1,90 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Color Creative Studio</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header>
-  <div class="brand">🎨 Color Creative Studio</div>
-  <button id="homeBtn" class="smallBtn" hidden>Home</button>
-</header>
+CanvasVerse
+Welcome to CanvasVerse! Choose your age group to get started.
+🌈 Ages 3–10 Simple coloring books 🎨 Ages 11–15 Coloring books + Free Draw ✨ Ages 16+ Advanced coloring + Free Draw
+Today's Challenge
+Draw something from outer space! 🚀
+🖼️ My Gallery
+← Back
+Choose Your Coloring Book
+👦 Boy Coloring Books 👧 Girl Coloring Books
+🏠 Home
+← Back
+Boy Coloring Books
+🦕 Dinosaurs 🚗 Cars & Vehicles 🚀 Space 🦁 Animals 🦸 Superheroes ⚽ Sports
+🏠 Home
+← Back
+Girl Coloring Books
+🦄 Unicorns 🧚 Fantasy 👑 Princesses 🧜 Mermaids 🌸 Flowers 🐰 Cute Animals
+🏠 Home
+← Back
+What do you want to create?
+📖 Coloring Books ✏️ Free Draw
+🏠 Home
+← Back
+Choose Boy or Girl
+👦 Boy Coloring Books 👧 Girl Coloring Books
+🏠 Home
+← Back
+Boy Coloring Books
+🐉 Dragons 🦖 Detailed Dinosaurs 🏎️ Sports Cars 🌌 Space 🎮 Gaming 🏀 Sports 🌊 Ocean Creatures
+🏠 Home
+← Back
+Girl Coloring Books
+🧚 Fantasy Worlds 🧜 Mermaids 🌙 Night Sky 🏰 Castles 🌺 Detailed Flowers 🐾 Cute Animals 👗 Fashion
+🏠 Home
+← Back
 
-<main>
-<section id="ageScreen" class="screen active">
-  <div class="hero">
-    <div class="paint">🖍️</div>
-    <h1>Create. Color. Draw.</h1>
-    <p>100% free • No subscription • Works on phones, tablets, and computers</p>
-  </div>
-  <h2>Pick your age group</h2>
-  <div class="ageGrid">
-    <button class="ageCard" data-age="young"><span>🧒</span><b>Ages 3–10</b><small>Coloring books</small></button>
-    <button class="ageCard" data-age="middle"><span>🖌️</span><b>Ages 11–15</b><small>Free draw + shading</small></button>
-    <button class="ageCard" data-age="older"><span>🎨</span><b>Ages 16+</b><small>Full creative studio</small></button>
-  </div>
-</section>
+Small Medium Large
+✏️ Brush 🧽 Eraser ↩️ Undo ↪️ Redo 🧹 Clear 💾 Save as PNG 🏠 Home
+← Back
+Choose Your Studio
+📖 Advanced Coloring Books ✏️ Full Free Draw Studio
+🏠 Home
+← Back
+Advanced Coloring Books
+Category 1 Category 2 Category 3
+🏠 Home
+← Back
 
-<section id="youngScreen" class="screen">
-  <h1>Ages 3–10</h1>
-  <p class="sub">Choose a coloring book.</p>
-  <div class="bookGrid">
-    <button class="bookCard" data-book="boy"><span>🚀</span><b>Boy Coloring Book</b><small>Adventure pages</small></button>
-    <button class="bookCard" data-book="girl"><span>🌸</span><b>Girl Coloring Book</b><small>Fun & colorful pages</small></button>
-  </div>
-  <div id="youngPicker" class="hidden">
-    <h2 id="bookTitle"></h2>
-    <div id="pageButtons" class="pageButtons"></div>
-  </div>
-  <div id="colorArea" class="hidden">
-    <div class="toolbar">
-      <div class="palette" id="youngPalette"></div>
-      <button id="youngClear" class="toolBtn">Clear</button>
-      <button id="youngSave" class="toolBtn">Save PNG</button>
-    </div>
-    <div class="canvasWrap"><canvas id="youngCanvas"></canvas></div>
-    <p class="hint">Tap a section to color it. Pick another color anytime.</p>
-  </div>
-</section>
+Small Medium Large
+✏️ Brush 🧽 Eraser ↩️ Undo ↪️ Redo 🧹 Clear 💾 Save as PNG 🏠 Home 🖼️ Gallery
+← Back
 
-<section id="middleScreen" class="screen">
-  <h1>Ages 11–15</h1>
-  <p class="sub">Free draw with color, shading, and tone controls.</p>
-  <div class="toolbar">
-    <label>Color <input id="midColor" type="color" value="#ff3b30"></label>
-    <label>Size <input id="midSize" type="range" min="2" max="40" value="10"></label>
-    <label>Tone <input id="midTone" type="range" min="0" max="100" value="50"></label>
-    <button id="midShade" class="toolBtn">Shade</button>
-    <button id="midEraser" class="toolBtn">Eraser</button>
-    <button id="midClear" class="toolBtn">Clear</button>
-    <button id="midSave" class="toolBtn">Save PNG</button>
-  </div>
-  <div class="toneRow"><span>Light</span><div id="tonePreview"></div><span>Deep</span></div>
-  <div class="canvasWrap drawWrap"><canvas id="midCanvas"></canvas></div>
-  <p class="hint">Draw with a finger, mouse, or stylus. The canvas resizes to your screen.</p>
-</section>
+Big Small
+↩️ Undo 🧹 Clear 💾 Save as PNG 🏠 Home
+← Back
+My Gallery
 
-<section id="olderScreen" class="screen">
-  <h1>Ages 16+</h1>
-  <p class="sub">Full creative studio: colors, shades, tones, brush sizes, eraser, and free draw.</p>
-  <div class="toolbar">
-    <label>Color <input id="oldColor" type="color" value="#6c5ce7"></label>
-    <label>Size <input id="oldSize" type="range" min="1" max="60" value="12"></label>
-    <label>Opacity <input id="oldOpacity" type="range" min="10" max="100" value="100"></label>
-    <label>Tone <input id="oldTone" type="range" min="0" max="100" value="50"></label>
-    <button id="oldShade" class="toolBtn">Shade</button>
-    <button id="oldEraser" class="toolBtn">Eraser</button>
-    <button id="oldClear" class="toolBtn">Clear</button>
-    <button id="oldSave" class="toolBtn">Save PNG</button>
-  </div>
-  <div class="toneRow"><span>Light</span><div id="oldTonePreview"></div><span>Deep</span></div>
-  <div class="canvasWrap drawWrap"><canvas id="oldCanvas"></canvas></div>
-  <p class="hint">Use touch, mouse, or stylus. No account is required.</p>
-</section>
-</main>
-
-<script src="script.js"></script>
-</body>
-</html>
++ New Drawing 🏠 Home
+Welcome back!
+Would you like to continue your last drawing?
+Continue Drawing Start New
